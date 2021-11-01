@@ -1,0 +1,194 @@
+:root {
+    box-sizing: border-box;
+  }
+  
+  *,
+  ::before,
+  ::after {
+    box-sizing: inherit;
+  
+    
+  }
+  
+  
+  /* Fuente */
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+  
+  
+  /* Colores */
+  :root{
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --lighter-grayish-cyan: hsl(189, 41%, 96%);
+    --white: hsl(0, 0%, 100%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(184, 14%, 56%);
+    --darker-grayish-cyan:  hsl(186, 14%, 43%);
+    --strong-cyan: hsl(172, 67%, 45%);
+  }
+  
+  
+  body {
+    font-family: 'Space Mono', monospace;
+    background-color: var(--light-grayish-cyan);
+    overflow: hidden;
+
+    
+
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  header {
+    margin-bottom: 60px;
+  }
+  
+  main {
+    width: 960px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 32px;
+    display: flex;
+    border-radius: 10px;
+  }
+  
+  h2 {
+    font-size: 16px;
+    color: var(--darker-grayish-cyan);
+  }
+  
+  .input-col, .output-col {
+    border-radius: 10px;
+  
+  }
+
+  
+  .input-col {
+    flex: 1;
+  }
+  
+  .output-col {
+    flex: 0.9;
+  }
+  
+  .input-col button {
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 24px;
+    border: none;
+    width: 120px;
+    font-family: 'Space Mono', monospace;
+    margin-top: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 12px;
+  }
+  
+  
+  
+  input[type=numeric] + h2 {
+    margin-bottom: 0px;
+    margin-top: 36px;
+  }
+  
+  
+  button + h2 {
+    margin-top: 32px;
+  }
+  .output-col h2 {
+    color: var(--white);
+  }
+  
+  .output-col p {
+    font-weight: 700;
+    color: var(--dark-grayish-cyan);
+  }
+  
+  .output-col .output-number {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--strong-cyan);
+    text-align: right;
+  }
+  
+  .output-col {
+    background-color: var(--very-dark-cyan);
+    padding: 0 40px 30px;
+    margin-left: 50px;
+  }
+  
+  button.reset {
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 40px;
+    padding: 12px 0;
+  }
+  
+  button.reset, button.active {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+  }
+  
+  button.custom {
+    background-color: var(--lighter-grayish-cyan);
+    color: var(--very-dark-cyan);
+  }
+  
+  .output-item button {
+    flex: 1;
+  }
+
+ 
+  
+  form input[type=numeric] {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--very-dark-cyan);
+    font-family: 'Space Mono', monospace;
+    text-align: right;
+    width: 100%;
+    border: none;
+    background-color: var(--lighter-grayish-cyan);
+    background-repeat: no-repeat;
+    background-position:  2% 50%;
+    margin-left: 12px;
+    padding: 8px;
+  
+  }
+  
+  form input[name=input-bill-total] {
+    background-image: url(images/icon-dollar.svg);
+    margin: 0;
+  }
+  
+  form input[name=input-persons-total] {
+    background-image: url(images/icon-person.svg);
+  }
+  
+  .output-item {
+    display: flex;
+    margin-top: 60px;
+  }
+  
+  .output-item .output-label, .output-item .output-number {
+    flex: 1;
+  }
+  
+  
+  p.output-number {
+    margin: 0;
+    line-height: 0.8;
+  }
+  
+  .output-label p, .output-label h2 {
+    margin: 0;
+  }
