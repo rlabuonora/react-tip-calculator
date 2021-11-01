@@ -20,7 +20,9 @@ function App() {
         <button className="active">15%</button>
         <button>25%</button>
         <button>50%</button>
-        <button className="custom">Custom</button>
+        <input type="text" 
+               placeholder="Custom" 
+               className="custom" />
         <h2>Number of People</h2>
         <input type="numeric" 
                name="input-persons-total" 

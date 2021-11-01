@@ -89,6 +89,21 @@
     border-radius: 10px;
     padding: 12px;
   }
+
+  .input-col input {
+    font-weight: 700;
+    font-size: 24px;
+    border: none;
+    width: 120px;
+    font-family: 'Space Mono', monospace;
+    margin-top: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    color: var(--very-dark-cyan);
+
+  }
   
   
   
@@ -98,7 +113,7 @@
   }
   
   
-  button + h2 {
+  input + h2, button + h2 {
     margin-top: 32px;
   }
   .output-col h2 {
