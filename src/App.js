@@ -5,7 +5,7 @@ function App() {
   return (
     <>
     <header>
-      <img src={logo} />
+      <img src={logo} alt="Splitter Logo" />
     </header>
     <main>
       <div className="input-col">
