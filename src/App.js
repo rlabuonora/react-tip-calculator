@@ -1,7 +1,22 @@
 import './App.css';
 import logo from "./images/logo.svg";
 
+import { useState } from "react";
+import TipButton from './components/TipButton';
+import CustomTip from './components/CustomTip';
+import InputTotalBill from './components/InputTotalBill';
+import InputPeople from './components/InputPeople';
+import ShowOutputs from './components/ShowOutputs';
+
+
+
+
 function App() {
+
+  const [tipPercent, setTip] = useState(0.1);
+  const [totalBill, setTotalBill] = useState();
+  const [nPeople, setPeople] = useState();
+  
   return (
     <>
     <header>
@@ -9,47 +24,42 @@ function App() {
     </header>
     <main>
       <div className="input-col">
-      <form>
+      <section>
         <h2>Bill</h2>
-        <input type="numeric" 
-               name="input-bill-total"
-               value={142.55} />
+        <InputTotalBill  
+          totalBill={totalBill}
+          setTotalBill={setTotalBill}
+        />
         <h2>Select Tip %</h2>
-        <button>5%</button>
-        <button>10%</button>
-        <button className="active">15%</button>
-        <button>25%</button>
-        <button>50%</button>
-        <input type="text" 
-               placeholder="Custom" 
-               className="custom" />
+        { [.05, .1, .15, .25, .5].map(
+          p => <TipButton
+                 selected={tipPercent === p}
+                 rate={p}
+                 onChangeTip={setTip}
+                />
+        )}
+        <CustomTip 
+          onChangeTip={setTip}
+        />
+        
         <h2>Number of People</h2>
-        <input type="numeric" 
-               name="input-persons-total" 
-               value={5} />
-      </form>
+        <InputPeople 
+          onChangePeople={ setPeople }
+        />
+      </section>
     </div>
-    <div className="output-col">
-      <div className="output-item">
-        <div className="output-label">
-          <h2>Tip Amount</h2>
-          <p>/ person</p>
-        </div>
-        <p className="output-number">$4.27</p>
-      </div>
-      <div className="output-item">
-        <div className="output-label">
-          <h2>Total</h2>
-          <p>/ person</p>
-        </div>
-        <p className="output-number">$32.79</p>
-      </div>
-      <div className="output-item">
-        <button className="reset">
-          Reset
-        </button>
-      </div>
-    </div>
+
+    <ShowOutputs 
+        totalBill={totalBill}
+        tipPercent={tipPercent}
+        nPeople ={nPeople}
+        onReset = {() => {
+          setPeople();
+          setTip(0.1);
+          setTotalBill();
+        }
+        }
+    />
     </main>
     </>
   );
