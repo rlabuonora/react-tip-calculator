@@ -6,7 +6,8 @@ export default function ShowOutputs({totalBill, tipPercent, nPeople, onReset = f
 
   const tip = calculateTip(totalBill, tipPercent);
 
-  const tipPerson = calculatePerPerson(tip, nPeople);
+  const perPerson = calculatePerPerson(totalBill, tipPercent, nPeople);
+  console.log(perPerson);
   
 
   return(
@@ -16,7 +17,7 @@ export default function ShowOutputs({totalBill, tipPercent, nPeople, onReset = f
         <h2>Tip Amount</h2>
         <p>/ person</p>
       </div>
-      <p className="output-number">{isNaN(tip) ? "" :  tip}</p>
+      <p className="output-number">{totalBill === 0 ? 0 :  tip}</p>
     </div>
     <div className="output-item">
       <div className="output-label">
@@ -24,7 +25,7 @@ export default function ShowOutputs({totalBill, tipPercent, nPeople, onReset = f
         <p>/ person</p>
       </div>
       <p className="output-number">
-        {isNaN(tipPerson) ? "" :  tipPerson}</p>
+        {nPeople === 0 ? 0 :  perPerson}</p>
     </div>
     <ResetButton onReset={onReset}/>
   </div>

@@ -5,11 +5,13 @@ export default function InputTotalBill({ totalBill, setTotalBill = f => f }) {
         <input type="number" 
                name="input-bill-total"
                value={totalBill}
-               onBlur={
-                (e) => {
-                    setTotalBill(e.target.value);
-                }
+               
+               onChange={
+                   (e) => {
+                       setTotalBill(e.target.value);
+                   }
                }
+
         />
     );
 }

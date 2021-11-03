@@ -14,8 +14,10 @@ import ShowOutputs from './components/ShowOutputs';
 function App() {
 
   const [tipPercent, setTip] = useState(0.1);
-  const [totalBill, setTotalBill] = useState();
-  const [nPeople, setPeople] = useState();
+  const [totalBill, setTotalBill] = useState(0);
+  const [nPeople, setPeople] = useState(0);
+
+  console.log(totalBill)
   
   return (
     <>
@@ -39,11 +41,13 @@ function App() {
                 />
         )}
         <CustomTip 
+          tip={tipPercent}
           onChangeTip={setTip}
         />
         
         <h2>Number of People</h2>
         <InputPeople 
+          nPeople={ nPeople }
           onChangePeople={ setPeople }
         />
       </section>
@@ -54,9 +58,11 @@ function App() {
         tipPercent={tipPercent}
         nPeople ={nPeople}
         onReset = {() => {
-          setPeople();
+
+          setPeople(0);
           setTip(0.1);
-          setTotalBill();
+          setTotalBill(0);
+
         }
         }
     />
