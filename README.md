@@ -46,11 +46,11 @@ Good practice with responsive design using flexbox and React's `useState` hook.
 
 ### Useful resources
 
-- [Wes Bos's flexbox.io](https://flexbox.io) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Wes Bos's flexbox.io](https://flexbox.io) - Great videos on flexbox.
 - [React Hooks in Action](https://www.manning.com/books/react-hooks-in-action) - The best resource I've seen so far on React.
 
 ## Author
 
 - Website - [Rafael La Buonora](https://www.rlabuonora.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/rlabuonora)
-- Twitter - [@yourusername](https://www.twitter.com/rlabuonora)
+- Frontend Mentor - [@rlabuonora](https://www.frontendmentor.io/profile/rlabuonora)
+- Twitter - [@rlabuonora](https://www.twitter.com/rlabuonora)
