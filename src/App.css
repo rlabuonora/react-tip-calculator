@@ -2,12 +2,19 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit; 
+  box-sizing: border-box; 
 }
 
 body, h1, h2, h3, h4, p, figure, blockquote, ul, ol {
   margin: 0;
 }
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
 
 input, button, textarea, select {
   font: inherit;
@@ -34,26 +41,43 @@ body {
   background-color: var(--light-grayish-cyan);
 }
 
-
-
-main {
-  
-  background-color: var(--white);
-  border-radius: 10px;
+header img {
+  margin: 50px auto;
 }
 
-label, h2 {
+main {
+  padding: 30px;
+  padding-top: 1px; /* prevent margin-collapse */
+  background-color: var(--white);
+  border-radius: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 960px) {
+  main {
+    min-width: 920px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input-col {
+    flex: 54% 0 0;
+  }
+  .output-col {
+    flex: 42% 0 0;
+  }
+}
+
+label span, h2 {
+  display: block;
+  margin: 30px 10px 10px;
   font-size: 16px;
   font-weight: bold;
   color: var(--darker-grayish-cyan);
 }
 
-label.custom-tip span {
-  text-indent: 1000px;
-  position: absolute;
-  white-space: nowrap;
-  overflow: hidden;;
-}
+
 
 .input-col, .output-col {
   border-radius: 10px;
@@ -69,7 +93,7 @@ label.custom-tip span {
   border: none;
   width: 120px;
   border-radius: 10px;
-  padding: 12px;
+  padding: 8px 12px;
 }
 
 .input-col input {
@@ -86,7 +110,33 @@ label.custom-tip span {
 
 }
 
+section.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+section.buttons h2 {
+  flex-basis: 100%;
+}
+section.buttons button, section.buttons label {
+  flex: 0 0 48%;
+  margin-top: 10px;
+}
+
+section.buttons label input {
+  width: 100%;
+  border-radius: 20px;
+
+}
+
+label.custom-tip span {
+  text-indent: 1000px;
+  position: absolute;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 48%;
+}
 
 input[type=numeric] + h2 {
   margin-bottom: 0px;
@@ -108,22 +158,37 @@ input + h2, button + h2 {
 
 .output-col .output-number {
   font-weight: 700;
-  font-size: 48px;
+  font-size: 36px;
   color: var(--strong-cyan);
   text-align: right;
 }
 
 .output-col {
   background-color: var(--very-dark-cyan);
+  padding: 20px;
+  margin-top: 40px;
   
 }
 
+.output-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.output-item h2 {
+  margin: 0;
+}
 button.reset {
   text-transform: uppercase;
   border: none;
   border-radius: 5px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 button.reset, button.active {
@@ -148,7 +213,7 @@ input[type=search], input[type=number]  {
   border: none;
   background-color: var(--lighter-grayish-cyan);
   background-repeat: no-repeat;
-  background-position:  2% 50%;
+  background-position:  5% 50%;
 
 
 }
@@ -171,7 +236,6 @@ section input[name=input-persons-total] {
 
 p.output-number {
   margin: 0;
-  line-height: 0.8;
 }
 
 

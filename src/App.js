@@ -31,7 +31,7 @@ function App() {
               setTotalBill={setTotalBill}
             />
           </section>
-          <section>
+          <section className="buttons">
             <h2>Select Tip %</h2>
             { [.05, .1, .15, .25, .5].map(
               p => <TipButton
