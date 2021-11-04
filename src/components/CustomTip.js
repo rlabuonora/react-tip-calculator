@@ -1,6 +1,8 @@
-export default function CustomTip({tip, onChangeTip = f => f}) {
+export default function CustomTip({label, tip, onChangeTip = f => f}) {
 
     return(
+      <label className="custom-tip">
+        <span>{label}</span>
         <input
             onBlur={(e) => {
               const newVal=e.target.value.replace(/%$/,"");
@@ -9,7 +11,9 @@ export default function CustomTip({tip, onChangeTip = f => f}) {
             }} 
             type="text" 
             placeholder="Custom" 
-            className="custom" />
+            className="custom" 
+        />
+      </label>
     );
 
 }
