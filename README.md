@@ -2,18 +2,6 @@
 
 This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). 
 
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
 ## Overview
 
 ### The challenge
@@ -27,7 +15,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://github.com/rlabuonora/react-tip-calculator)
-- [Live Site URL](https://tip-calculator-rlabuonora.netlify.app/)
+- [Live Site URL](https://frontend-mentor-tip-calculator.netlify.app/)
 
 ## My process
 
